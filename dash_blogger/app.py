@@ -10,8 +10,11 @@ app = Dash(
     update_title="Loading...",  # Title displayed during page load
 )
 
+server = app.server
+
 # Set the layout for the app
 app.layout = layout
+
 
 # Run the server
 if __name__ == "__main__":

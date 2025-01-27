@@ -17,4 +17,7 @@ COPY . .
 EXPOSE 8050
 
 # Command to run the application
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
+
+# Command to run Gunicorn and serve the app
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:server"]
