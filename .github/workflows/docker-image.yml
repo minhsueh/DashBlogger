@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/your-repo-name:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/DashBlogger:latest
