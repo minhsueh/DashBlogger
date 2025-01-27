@@ -12,6 +12,8 @@ env:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    env:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -30,5 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/dashblogger:latest
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ env.DOCKERHUB_USERNAME }}/dashblogger:latest
