@@ -22,12 +22,15 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ env.DOCKERHUB_USERNAME }}
-          password: ${{ env.DOCKERHUB_TOKEN }}
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_TOKEN
+
+      - name: Debug Secrets
+        run: echo "DockerHub Username: $DOCKERHUB_USERNAME"
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ env.DOCKERHUB_USERNAME }}/dashblogger:latest
+          tags: $DOCKERHUB_USERNAME/dashblogger:latest
