@@ -15,6 +15,11 @@ jobs:
     env:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
     steps:
+      - name: Verify DOCKERHUB_USERNAME
+        run: echo "DOCKERHUB_USERNAME is set to: $DOCKERHUB_USERNAME"
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          
       - name: Checkout Repository
         uses: actions/checkout@v4
 
