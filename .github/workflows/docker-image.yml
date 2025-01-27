@@ -26,7 +26,7 @@ jobs:
           password: $DOCKERHUB_TOKEN
 
       - name: Debug Secrets
-        run: echo "DockerHub Username: $DOCKERHUB_USERNAME"
+        run: echo "DockerHub Username: ${DOCKERHUB_USERNAME}"
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
