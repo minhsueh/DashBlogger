@@ -25,9 +25,6 @@ jobs:
           username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ env.DOCKERHUB_TOKEN }}
 
-      - name: Debug Secrets
-        run: echo "DockerHub Username: ${{ env.DOCKERHUB_USERNAME }}"
-
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
