@@ -5,16 +5,10 @@ on:
     branches:
       - main
 
-env:
-  DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify DOCKERHUB_USERNAME
-        run: echo "DOCKERHUB_USERNAME is set to $DOCKERHUB_USERNAME"
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -32,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.DOCKERHUB_USERNAME }}/dashblogger:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/dashblogger:latest
