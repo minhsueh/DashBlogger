@@ -17,7 +17,7 @@ COPY . .
 EXPOSE 8050
 
 # Command to run the application
-# CMD ["python", "app.py"]
+# CMD ["python", "-m", "dash_blogger.app"]
 
 # Command to run Gunicorn and serve the app
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8050", "dash_blogger.app:server"]
