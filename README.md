@@ -1,9 +1,9 @@
 # DashBlogger
 
-DashBlogger is an interactive and scalable blog application built with Dash and 
-Plotly. It empowers users to create, visualize, and share blog posts with dynamic 
-data visualizations, leveraging the simplicity and power of Python. The app is 
-designed for seamless integration, easy customization, and deployment-ready 
+DashBlogger is a interactive and scalable blog application framework built with Dash and 
+Plotly. It allows users to create, visualize, and share blog posts with dynamic data 
+visualizations, harnessing the simplicity and power of Python. The framework is 
+designed for seamless integration, effortless customization, and deployment-ready 
 features.
 
 ---
