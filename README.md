@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # DashBlogger
 
 DashBlogger is a interactive and scalable blog application framework built with Dash and 
