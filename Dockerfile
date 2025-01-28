@@ -20,4 +20,4 @@ EXPOSE 8050
 # CMD ["python", "app.py"]
 
 # Command to run Gunicorn and serve the app
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:server"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8050", "dash_blogger.app:server"]
