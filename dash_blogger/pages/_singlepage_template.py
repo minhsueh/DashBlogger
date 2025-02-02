@@ -1,3 +1,9 @@
+"""
+Author: AUTHOR_NAME
+Email: AUTHOR_EMAIL
+Date: DATE
+"""
+
 # These are the required dependencies and code for DashBlogger. Please do not modify!
 import dash
 from dash_blogger.layouts.dash_blogger_utils import get_url_path
